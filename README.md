@@ -11,3 +11,5 @@ In case of an issue, an allowance to miss one day per 7 days (or some other priv
 
 Regards,
 CSI CP Team.
+
+<br><br>![100 Days of Code](https://user-images.githubusercontent.com/125901601/224051239-515e5a30-30a9-4b18-af93-aec8aa22eed9.png)
