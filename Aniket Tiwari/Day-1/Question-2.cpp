@@ -12,14 +12,11 @@ public:
             res[i]=("FizzBuzz");
             else if(num%3==0)
             res[i]=("Fizz");
+            else if(num%5==0)
+            res[i]=("Buzz");
             else
-            res[i]=num+"";
+            res[i]=to_string(num);
         }
         return res;
     }
 };
-
-int main(){
-    Solution s;
-    s.fizzBuzz(3);
-}
