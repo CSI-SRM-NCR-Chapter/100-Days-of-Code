@@ -1,16 +1,23 @@
-class Solution(object):
-    def isPalindrome(self, x):
-        """
-        :type x: int
-        :rtype: bool
-        """
-        if x < 0:
-            return False
-    # Store the number in a variable
-        number = x
-    # This will store the reverse of the number
-        reverse = 0
-        while number:
-          reverse = reverse * 10 + number % 10
-          number //= 10
-        return x == reverse
+class Solution {
+public:
+    void merge(vector<int>& nums1, int m, vector<int>& nums2, int n) {
+        int i = m - 1, j = n - 1, k = m + n - 1;
+
+        for(; i >=0 && j >=0; k--){
+            if(nums1[i] >= nums2[j]){
+                nums1[k] = nums1[i--];
+            } else {
+                nums1[k] = nums2[j--];
+            }
+        }
+
+
+        while(i >= 0) {
+            nums1[k--] = nums1[i--];
+        }
+
+        while(j >= 0) {
+            nums1[k--] = nums2[j--];
+        }
+    }
+};
