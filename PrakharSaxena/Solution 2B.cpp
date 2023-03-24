@@ -20,3 +20,5 @@ public:
         while(r>=0){
             nums1[k--]=nums2[r--];
         }
+    }
+};
