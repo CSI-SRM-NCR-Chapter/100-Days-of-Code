@@ -3,3 +3,17 @@ Day 1:
 https://leetcode.com/problems/fibonacci-number/
 
 https://leetcode.com/problems/fizz-buzz/
+
+
+Day 2:
+
+https://leetcode.com/problems/single-number
+
+https://leetcode.com/problems/merge-sorted-array
+
+
+Day 3:
+
+https://leetcode.com/problems/two-sum/
+
+https://leetcode.com/problems/palindrome-number/
