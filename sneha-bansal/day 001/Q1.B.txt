@@ -1,0 +1,20 @@
+class Solution{
+public:
+    vector<string> fizzBuzz(int n){
+vector<string>ans;
+int i;
+        for(i=1;i<=n;i++)
+        {
+            string ap;
+            if(i%3==0)
+                ap+="Fizz";
+            if(i%5==0)
+                ap+="Buzz";
+            if(ap.length()==0)
+                ap=to_string(i);
+            ans.push_back(ap);
+                
+        }
+        return ans;
+    }
+    };
