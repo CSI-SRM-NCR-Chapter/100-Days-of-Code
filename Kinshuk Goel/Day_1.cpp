@@ -1,5 +1,15 @@
 class Solution {
 public:
+    int fib(int n) {
+        if(n==0) return 0;
+        if(n==1) return 1;
+        return fib(n-1)+fib(n-2);
+    }
+}; //Day 1.1
+
+
+class Solution {
+public:
     vector<string> fizzBuzz(int n) {
         vector <string> v;
         for(int i=1 ; i<=n; i++)
@@ -11,4 +21,4 @@ public:
         }
         return v;
     }
-};
+}; //Day 1.2
