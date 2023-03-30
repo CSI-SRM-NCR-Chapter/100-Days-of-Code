@@ -2,7 +2,7 @@
 
 100 Days of Code is a coding event being organized by the CSI SRM NCR Chapter  and it is aimed at improving the problem solving skills of those who participate through consistent practice of questions every day for a hundred days.
 
-Start:  Saturday, March 22, 2023
+Start:  Saturday, March 22, 2023<br>
 End:    Monday, June 30, 2023
 
 The questions are picked from Leetcode and the submissions have to be done on individual Leetcode accounts as well as on CSI's GitHub repository "Hundred-days-of-Code".
