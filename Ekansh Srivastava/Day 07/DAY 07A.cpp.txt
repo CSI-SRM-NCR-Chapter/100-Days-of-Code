@@ -1,0 +1,17 @@
+class Solution {
+public:
+    bool isUgly(int n) {
+      int p=2;
+      while(n>1&&p<=5)
+      {
+          if(n%p==0){
+             n/=p;
+        }
+        else p++;
+      }
+      if(n==1)
+      return true;
+      else
+      return false;
+    }
+};
