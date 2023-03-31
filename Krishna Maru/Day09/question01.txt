@@ -1,0 +1,18 @@
+int solve(int n){
+   long rev_nu=0;
+    while(n!=0){
+        int rem=n%10;
+        n=n/10;
+
+        rev_nu=rev_nu*10+rem;
+        if(rev_nu>INT_MAX || rev_nu<INT_MIN) return 0; 
+    }
+    return int(rev_nu);
+}
+    int reverse(int x) {
+        if(x<0){
+            x=abs(x);
+            return -1*solve(x);
+        }
+        return solve(x);
+    }
