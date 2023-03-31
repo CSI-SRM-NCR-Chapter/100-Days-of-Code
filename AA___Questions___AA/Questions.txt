@@ -38,3 +38,31 @@ Day 6:
 https://leetcode.com/problems/valid-anagram/
 
 https://leetcode.com/problems/add-digits/
+
+
+Day 7:
+
+https://leetcode.com/problems/ugly-number/
+
+https://leetcode.com/problems/ugly-number/
+
+
+Day 8:
+
+https://leetcode.com/problems/reverse-words-in-a-string/
+
+https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/
+
+
+Day 9:
+
+https://leetcode.com/problems/reverse-integer/
+
+https://leetcode.com/problems/longest-common-prefix/
+
+
+Day 10:
+
+https://leetcode.com/problems/power-of-two/
+
+https://leetcode.com/problems/missing-number/
