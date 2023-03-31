@@ -1,0 +1,31 @@
+class Solution {
+public:
+    void moveZeroes(vector<int>& nums) {
+        vector <int> ans;
+        int count = 0;
+        int size = nums.size();
+        //count number of zeros and use it as a looping condition//
+        int i;
+        for (i = 0; i < size; i++)
+        {
+            if (nums[i] == 0)
+            {
+                count++;
+            }
+        }
+        //pushback all non zero values to the vector//
+        for (int i = 0; i < size; i++)
+        {
+            if (nums[i]!=0)
+            {
+                ans.push_back(nums[i]);
+            }
+        }
+        //pushback all the values as zero till count//
+        for (int i = 0; i < count; i++)
+        {
+            ans.push_back(0);
+        }
+        nums = ans;
+    }    
+};
