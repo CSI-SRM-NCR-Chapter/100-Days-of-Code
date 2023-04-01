@@ -66,3 +66,17 @@ Day 10:
 https://leetcode.com/problems/power-of-two/
 
 https://leetcode.com/problems/missing-number/
+
+
+Day 11:
+
+https://leetcode.com/problems/hamming-distance/
+
+https://leetcode.com/problems/max-consecutive-ones/
+
+
+Day 12:
+
+https://leetcode.com/problems/find-the-difference/
+
+https://leetcode.com/problems/ransom-note/ 
