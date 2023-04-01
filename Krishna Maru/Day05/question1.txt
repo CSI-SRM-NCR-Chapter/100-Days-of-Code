@@ -1,0 +1,24 @@
+int majorityElement(vector<int>& nums) {
+       
+
+        ///*******Hashing ****\\\\\\
+
+        unordered_map<int,int> mapp;
+        for(int i=0;i<nums.size();i++){
+            mapp[nums[i]]++;
+        }
+        int currFreq=0;
+        int ans;
+        for(int i=0;i<nums.size();i++){
+            if(mapp.find(nums[i])!=mapp.end()){
+                int freq=mapp[nums[i]];
+                if(currFreq<freq){
+                    currFreq=freq;
+                    ans=nums[i];
+                }
+            }
+        }
+
+        return ans;
+    
+    }
