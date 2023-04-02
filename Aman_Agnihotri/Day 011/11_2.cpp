@@ -12,4 +12,4 @@ public:
         }
         return max(lastMax, curMax);
     }
-};d
+};
