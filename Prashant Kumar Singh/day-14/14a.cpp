@@ -1,18 +1,15 @@
 class Solution {
 public:
-    static bool comp(vector<int>& a, vector<int>& b)
-    {
-        if(a[0]==b[0])
-        return a[1]<b[1];
-        return a[0]>b[0];
-    }
-    vector<vector<int>> reconstructQueue(vector<vector<int>>& people) {
-        sort(people.begin(), people.end(), comp);
-        vector<vector<int>> ans;
-        for(int i=0;i<people.size();i++)
-        {
-            ans.insert(ans.begin()+people[i][1], people[i]);
+    bool isPerfectSquare(int num) {
+      if(num == 1) return true;
+        int left = 0;
+        int right = num;
+        while(left <= right){
+          double mid = left + (right - left) / 2;
+          if(mid == num / mid) return true;
+          if(mid > num / mid) right = mid - 1;
+          else left = mid + 1;
         }
-        return ans;
+        return false;
     }
 };
