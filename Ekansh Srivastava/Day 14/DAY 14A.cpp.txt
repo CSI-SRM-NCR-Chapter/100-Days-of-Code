@@ -1,0 +1,10 @@
+class Solution {
+public:
+    bool isPerfectSquare(int num) {
+        int a =sqrt(num);
+        if(sqrt(num)==a)
+        return true;
+        else
+        return false;
+    }
+};
