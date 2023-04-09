@@ -1,0 +1,14 @@
+vector<vector<int>> generate(int numRows) {
+       
+        vector<vector<int>>pascal;
+        for(int line=1;line<=numRows;line++){
+             vector<int>ans;
+            int corner =1;
+            for(int i=1;i<=line;i++){
+                ans.push_back(corner);
+                corner=corner * (line-i)/i;
+            }
+            pascal.push_back(ans);
+        }
+        return pascal;
+    }
