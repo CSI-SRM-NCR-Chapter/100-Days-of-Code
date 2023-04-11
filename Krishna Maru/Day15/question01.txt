@@ -1,0 +1,20 @@
+    string smallestNumber(string pattern) {
+        string ans="";
+        for (int i=0;i<=pattern.size();i++){
+            ans.push_back(i+'0'+1);
+        }
+        int i=0;
+        int n=pattern.size();
+        while(i<n){
+            int j=i+1;
+            while(j<n  and pattern[j]==pattern[i])j++;
+
+            if(pattern[i]=='D')reverse(ans.begin()+i, ans.begin()+j+1);
+            i=j;
+            
+
+        }
+     
+        
+        return ans;
+    }
