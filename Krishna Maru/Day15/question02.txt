@@ -1,0 +1,35 @@
+  bool isPalindrom(string s){
+        int st =0;
+        int en=s.size()-1;
+        while(st<=en){
+            if(s[st]!=s[en]){
+                return false;
+            }
+            st++;
+            en--;
+        }
+        return true;
+    }
+    bool isStrictlyPalindromic(int n) {
+        int base=2;
+        bool flag =false;
+        while(base>=2 and base<=n-2){
+            string ans="";
+            int N=n;
+            while(N!=0){
+                int rem = N%base;
+                N=N/base;
+                ans=ans+ to_string(rem);
+            }
+            if(isPalindrom(ans)){
+                flag=true;
+            }
+            else{
+                flag=false;
+            }
+            base++;
+
+        }
+        return flag;
+        // return false;
+    }
