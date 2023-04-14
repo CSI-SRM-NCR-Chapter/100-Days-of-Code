@@ -1,0 +1,9 @@
+int missingNumber(vector<int>& nums) {
+        int n=nums.size();
+        int sum=(n*(n+1))/2;
+        int re_El=0;
+        for(int i=0;i<n;i++){
+            re_El=re_El+nums[i];
+        }
+        return sum-re_El;
+    }

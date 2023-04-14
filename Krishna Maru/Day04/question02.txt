@@ -1,0 +1,25 @@
+class Solution {
+    private: double solve(double x ,int n){
+        if(n==0)return 1;
+        if(x==0)return 0;
+        double ans=myPow(x,n/2);
+        if(fmod(n,2)==0){
+            return ans*ans;
+        }
+        else{
+           return x*ans*ans;
+      
+        }
+    }
+public:
+    double myPow(double x, int n) {
+        if(n<0){
+            n=abs(n);
+            return 1/(solve(x,n));
+        }
+        else{
+             return solve(x,n);
+        }
+     
+    }
+};

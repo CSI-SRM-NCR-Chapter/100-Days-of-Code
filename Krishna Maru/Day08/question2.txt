@@ -1,0 +1,42 @@
+int binary_search(vector<int>& arr, int key){
+        int left=0, right=arr.size()-1;
+        int mid;
+        while(left<=right){
+            mid=left+(right-left)/2;
+            if(arr[mid]==key){
+               if(mid<arr.size()-1 && arr[mid+1]==key){
+			        left=mid+1;
+		            }
+		       else{
+			        return mid;
+		        }
+            }
+            else if(arr[mid]>key){
+                right=mid-1;
+
+            }
+            else{
+                left=mid+1;
+            }
+        }
+        return -1;
+    }
+    vector<int> twoSum(vector<int>& arr, int target) {
+        vector<int>index;
+        int i=0;
+        int n=arr.size();
+        int key;
+        while(i<n){
+            key=target-arr[i];
+            int idx=binary_search(arr,key);
+            if(idx!=-1){
+                index.push_back(i+1);
+                index.push_back(idx+1);
+                break;
+            }
+            else{
+                i++;
+            }
+        }
+        return index;
+    }
