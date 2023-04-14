@@ -1,0 +1,19 @@
+int romanToInt(string s) {
+        
+        unordered_map<char,int>mapp;
+        mapp['I']=1;
+        mapp['V']=5;
+        mapp['X']=10;
+        mapp['L']=50;
+        mapp['C']=100;
+        mapp['D']=500;
+        mapp['M']=1000;
+        int num=0;
+        for(int i=0;i<s.size();i++){
+           // if the next value is greater then subtract the current value from the sum
+            if (i<s.size()-1 and mapp[s[i]] < mapp[s[i+1]]) num -= mapp[s[i]];
+            // otherwise, if the next value is smaller then add the current value to sum
+            else num += mapp[s[i]];
+        }
+       return num;
+    }
