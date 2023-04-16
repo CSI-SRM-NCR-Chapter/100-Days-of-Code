@@ -1,0 +1,82 @@
+Day 1:
+
+https://leetcode.com/problems/fibonacci-number/
+
+https://leetcode.com/problems/fizz-buzz/
+
+
+Day 2:
+
+https://leetcode.com/problems/single-number
+
+https://leetcode.com/problems/merge-sorted-array
+
+
+Day 3:
+
+https://leetcode.com/problems/two-sum/
+
+https://leetcode.com/problems/palindrome-number/
+
+
+Day 4:
+
+https://leetcode.com/problems/remove-duplicates-from-sorted-array/
+
+https://leetcode.com/problems/powx-n/
+
+
+Day 5:
+
+https://leetcode.com/problems/majority-element/
+
+https://leetcode.com/problems/contains-duplicate/
+
+
+Day 6:
+
+https://leetcode.com/problems/valid-anagram/
+
+https://leetcode.com/problems/add-digits/
+
+
+Day 7:
+
+https://leetcode.com/problems/ugly-number/
+
+https://leetcode.com/problems/ugly-number/
+
+
+Day 8:
+
+https://leetcode.com/problems/reverse-words-in-a-string/
+
+https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/
+
+
+Day 9:
+
+https://leetcode.com/problems/reverse-integer/
+
+https://leetcode.com/problems/longest-common-prefix/
+
+
+Day 10:
+
+https://leetcode.com/problems/power-of-two/
+
+https://leetcode.com/problems/missing-number/
+
+
+Day 11:
+
+https://leetcode.com/problems/hamming-distance/
+
+https://leetcode.com/problems/max-consecutive-ones/
+
+
+Day 12:
+
+https://leetcode.com/problems/find-the-difference/
+
+https://leetcode.com/problems/ransom-note/ 

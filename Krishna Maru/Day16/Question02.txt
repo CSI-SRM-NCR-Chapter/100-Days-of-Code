@@ -1,0 +1,22 @@
+void solve(int i ,vector<int>& cookies, int n,int k,vector<int> &store,int &ans){
+        if(i==n){
+            ans= min(ans,*max_element(store.begin(),store.end()));
+            return;
+        }
+
+        for(int child=1;child<=k;child++){
+            if(store[child-1]+cookies[i]>ans) continue;
+            store[child-1]+=cookies[i];
+            solve(i+1, cookies,n, k, store,ans);
+            store[child-1]-= cookies[i];
+            if(store[child-1]==0)break;
+        }
+
+    }
+    int distributeCookies(vector<int>& cookies, int k) {
+      vector<int> store(k,0);
+      int n=cookies.size();
+      int ans=INT_MAX;
+      solve(0,cookies, n, k,store,ans);
+      return ans;
+    }

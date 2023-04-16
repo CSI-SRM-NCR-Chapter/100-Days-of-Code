@@ -1,0 +1,32 @@
+// Fair Distribution of Cookies
+class Solution{
+    public:
+ int mini = INT_MAX;
+    
+    void search(vector<int>& cook,int si,vector<int>& bag,int k){
+        if(si == cook.size()){
+            int mx = 0;
+            for(int i =0;i<bag.size();i++){
+                mx = max(mx,bag[i]);
+            }
+            mini = min(mini,mx);
+            return ;
+        }
+        
+        
+        for(int i=0;i<bag.size();i++){
+            bag[i]+= cook[si];
+            search(cook,si+1,bag,k);
+            bag[i]-=cook[si];}
+        
+        return ;    
+    }
+    
+    int distributeCookies(vector<int>& cookies, int k) {
+        mini = INT_MAX;
+        vector<int> bag(k,0);
+        search(cookies,0,bag,k);
+        return mini;  
+    }
+
+};

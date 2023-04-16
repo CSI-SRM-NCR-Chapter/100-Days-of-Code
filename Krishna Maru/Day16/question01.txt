@@ -1,0 +1,17 @@
+int minNumber(vector<int>& nums1, vector<int>& nums2) {
+         sort(nums1.begin(), nums1.end());
+         sort(nums2.begin(), nums2.end());
+         int mini= nums1[0];
+         int maxi=nums2[0];
+         for(int i=0;i<nums1.size();i++){
+             if(binary_search(nums2.begin(),nums2.end(), nums1[i])){
+                 return nums1[i];
+             }
+         }
+         if(mini<maxi){
+             return mini*10+maxi;
+         }
+         else{
+             return maxi*10+mini;
+         }
+    }

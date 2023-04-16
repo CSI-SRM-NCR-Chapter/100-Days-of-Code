@@ -1,0 +1,19 @@
+class Solution {
+public:
+    int fib(int n) {
+        int t0=0,t1=1,next=0;
+        if(n == 0) {
+            return t0;
+            }
+        if(n == 1) {
+            return 1;
+            }
+        for(int i=1;i<n;i++){   
+            next = t0 + t1;
+            t0 = t1;
+            t1 = next;
+        }
+        return next; 
+
+    }
+};
