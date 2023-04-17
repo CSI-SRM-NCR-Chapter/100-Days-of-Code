@@ -1,0 +1,19 @@
+ int trap(vector<int>& arr) {
+      int left=0,right=arr.size()-1;
+        int  maxleft=arr[left];
+        int  maxright=arr[right];
+        int  water=0;
+        while(left<right){
+            if(arr[left]<=arr[right]){
+                left++;
+                maxleft=max(maxleft,arr[left]);
+                water+=maxleft-arr[left];
+            }
+            else{
+                right--;
+                maxright=max(maxright,arr[right]);
+                water+=maxright-arr[right];
+            }
+        }
+        return water;
+    }

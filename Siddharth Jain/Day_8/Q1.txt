@@ -1,0 +1,20 @@
+// Reverse Word in a string
+class Solution {
+public:
+    string reverseWords(string s) {
+        stringstream ss(s);
+        vector<string> str;
+        string word;
+        string ans = "";
+        while(ss>>word){
+            str.push_back(word);
+        }
+        reverse(str.begin(),str.end());
+        for(string st:str){
+            ans = ans + st + " ";
+        }
+        ans.erase(ans.end() - 1);
+        return ans;
+
+    }
+};
