@@ -1,0 +1,12 @@
+int hammingDistance(int x, int y) {
+     string X1 = bitset<32>(x).to_string();
+     string X2 = bitset<32>(y).to_string();
+    int count=0;
+     for(int i=0;i<32;i++){
+         if(X1[i]!=X2[i]){
+             count++;
+         }
+     }
+     return count;
+      
+    }
