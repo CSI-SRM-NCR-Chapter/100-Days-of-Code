@@ -1,0 +1,9 @@
+ int md(int x, int y, int x1, int y2){
+        return abs(x - x1) + abs(y2 - y);
+    }
+    bool escapeGhosts(vector<vector<int>>& ghosts, vector<int>& target) {
+    int d = md(target[0], target[1], 0, 0);
+        for (auto& v : ghosts)
+            if (md(target[0], target[1], v[0], v[1]) <= d) return false;
+    return true;
+    }
