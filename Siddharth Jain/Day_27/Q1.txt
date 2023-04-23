@@ -1,0 +1,20 @@
+// Binary Nummbers  with alternating No.
+class Solution
+{
+public:
+    bool hasAlternatingBits(int n)
+    {
+        string str;
+        for (int i = 0; n > 0; i++)
+        {
+            str += to_string(n % 2);
+            n /= 2;
+        }
+        for (int i = 1; i <= str.length(); ++i)
+        {
+            if (str[i] == str[i - 1])
+                return false;
+        }
+        return true;
+    }
+};
