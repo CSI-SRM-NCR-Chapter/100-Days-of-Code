@@ -1,0 +1,16 @@
+class Solution {
+public:
+    int signFunc(bool isneg){ 
+     return isneg?-1:1;
+    }
+    int arraySign(vector<int>& nums) {
+        bool isneg= false;
+        for(int i=0;i<nums.size();i++){
+           if(nums[i]==0)return 0;
+           else if(nums[i]<0){
+               isneg=!isneg;
+           }
+        }
+        return signFunc(isneg);
+    }
+};
