@@ -1,0 +1,12 @@
+class Solution {
+    public char findTheDifference(String s, String t) {
+        char c = ' ';
+        s += t;
+        int x = (int) (s.charAt(0));
+        for (int i = 1; i < s.length(); i++) {
+            x ^= (int) (s.charAt(i));
+        }
+        c = (char) x;
+        return c;
+    }
+}
