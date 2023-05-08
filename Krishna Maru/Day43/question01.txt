@@ -1,0 +1,31 @@
+class Solution {
+public:
+    int calPoints(vector<string>& operations) {
+    int sum=0;
+    vector<int>arr(operations.size());
+    int count=0;
+
+    for(int i=0;i<operations.size();i++){
+      
+        if(operations[i]=="C"){
+            arr[--count]=0;
+        }
+        else if(operations[i]=="D"){
+            arr[count] = 2 * arr[count-1];
+            count++;
+        }
+        else if(operations[i]=="+"){
+            arr[count]= arr[count-1] + arr[count-2];
+            count++;
+        }
+        else{
+            arr[count] = stoi(operations[i]);
+            count++;
+        }   
+    }
+    for(int j=0;j<arr.size();j++){
+        sum += arr[j];
+    }
+    return sum;
+    }
+};

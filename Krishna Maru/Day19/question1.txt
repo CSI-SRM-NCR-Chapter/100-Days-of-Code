@@ -1,0 +1,40 @@
+vector<int> plusOne(vector<int>& digits) {
+        
+        
+        int count=0;
+        int n =digits.size();
+         vector<int> res;
+         for(int i=n-1;i>=0;i--){
+             if(digits[i]==9){
+                 ++count;
+             }
+             else{
+                 break;
+             }
+        }
+        if(count ==n){
+            for(int i=0;i<n;i++){
+                res.push_back(0);
+            }
+            res.push_back(1);
+        reverse(res.begin(),res.end());
+
+            return res;
+        }
+        
+        for(int i=n-1;i>=0;i--){
+             if(count>0){
+                 res.push_back(0);
+                 count--;
+             }
+             else if(count==0){
+                 res.push_back(digits[i]+1);
+                 count--;
+             }
+             else
+              { res.push_back(digits[i]);}
+
+        }
+        reverse(res.begin(),res.end());
+        return res;
+    }

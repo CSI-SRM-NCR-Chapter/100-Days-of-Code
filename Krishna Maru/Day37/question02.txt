@@ -1,0 +1,14 @@
+class Solution {
+public:
+    int minTimeToType(string word) {
+        int ans=0;
+        char prev= 'a';
+        for(auto i:word){
+            ans+=min(abs(i-prev),26-abs(i-prev))+1;
+            prev=i;
+        }
+
+      return ans;
+
+    }
+};

@@ -1,0 +1,25 @@
+  vector<vector<int>> findDifference(vector<int>& nums1, vector<int>& nums2) {
+       
+          vector<vector<int>>ans(2,vector<int>());
+
+          unordered_set<int>fset;
+          unordered_set<int>sset;
+
+          for(auto i: nums1)fset.insert(i);
+          for(auto i: nums2)sset.insert(i);
+
+          for(auto i: fset){
+              if(sset.find(i)!=sset.end() ){
+                  continue;
+              }
+              ans[0].push_back(i);
+          }
+            for(auto i: sset){
+              if(fset.find(i)!=fset.end()){
+                  continue;
+              }
+              ans[1].push_back(i);
+          }
+
+       return ans;
+    }

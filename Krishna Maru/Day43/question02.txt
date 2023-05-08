@@ -1,0 +1,20 @@
+   int findShortestSubArray(vector<int>& nums) {
+        unordered_map<int,vector<int>>mp;
+        int n=nums.size();
+        for(int i=0;i<n;i++){
+            mp[nums[i]].push_back(i);
+        }
+        int maxe=-1,cnt=0,ans=INT_MAX;
+        for(auto x:mp){        
+            if(x.second.size()==cnt)
+                ans=min(ans,x.second[x.second.size()-1]-x.second[0]);
+            if(x.second.size()>cnt)
+            {       
+                ans=x.second[x.second.size()-1]-x.second[0];
+                cnt=x.second.size();
+            }
+        }   
+        return ans+1;
+
+    
+    }
