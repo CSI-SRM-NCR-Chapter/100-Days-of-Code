@@ -1,0 +1,17 @@
+class Solution {
+public:
+    bool checkDistances(string s, vector<int>& distance) {
+        vector<int>space(26,0);
+        for(int i=0;i<s.size();i++){
+            if(space[s[i]-'a']){
+                 if(i-space[s[i]-'a']!=distance[s[i]-'a']){
+                   return false;
+                 }
+            }
+            else{
+                space[s[i]-'a']=i+1;
+            }
+        }
+        return true;
+    }
+};

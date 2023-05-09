@@ -1,0 +1,22 @@
+  int lengthOfLIS(vector<int>& nums) {
+     vector<int>dp;
+     dp.push_back(nums[0]);
+
+     for( int i = 1;i< nums.size() ;i++ )
+     {
+        
+         int lb = lower_bound(dp.begin(), dp.end() ,nums[i]) -dp.begin();
+
+         if(lb == dp.size())
+         {
+              dp.push_back(nums[i]);
+         }
+
+         else{
+             dp[lb]= nums[i];
+         }
+          
+     }
+    
+    return dp.size();
+    }

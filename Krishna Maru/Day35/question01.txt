@@ -1,0 +1,30 @@
+class Solution {
+public:
+    int candy(vector<int>& arr) {
+        int size=arr.size();
+        vector<int>dist(size,1);
+
+        //First Pass Move from left to right
+        for(int i=1;i<size;i++)
+        {
+            if(arr[i]>arr[i-1])
+            {
+                dist[i]=dist[i-1]+1;
+            }
+        }
+        //Second pass Move from left to right
+        for(int i=size-2;i>=0;i--)
+        {
+            if(arr[i]>arr[i+1] && dist[i]<=dist[i+1])
+            {
+                dist[i]=dist[i+1]+1;
+            }
+        }
+        int total_candies=0;
+        for(auto it:dist)
+        {
+            total_candies+=it;
+        }
+        return total_candies;
+    }
+};
