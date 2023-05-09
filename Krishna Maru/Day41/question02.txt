@@ -1,0 +1,33 @@
+class Solution {
+public:
+    bool matches(char top,char ch){
+    if(ch==')' && top=='(' ||
+        ch=='}' && top=='{'||
+        ch==']' && top=='['){
+            return true;
+        }
+        return false;
+    }
+
+    
+    bool isValid(string s) {
+        stack<int> stk;
+        for(int i = 0; i < s.length(); i++){
+            if(s[i] == '(' || s[i] == '{' || s[i] == '['){
+                stk.push(s[i]);
+            }
+            else{
+                if(stk.empty() == true){
+                    return false;
+                }
+                else if(matches(stk.top(), s[i]) == false){
+                    return false;
+                }else{
+                    stk.pop();
+                }
+            }
+        }
+        return (stk.empty() == true);
+    
+    }
+};

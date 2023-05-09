@@ -1,0 +1,100 @@
+class FizzBuzz {
+private:
+    int n;
+
+public:
+    mutex m;
+    int count=1;
+    FizzBuzz(int n) {
+        this->n = n;
+        this->count=1;
+    }
+
+    // printFizz() outputs "fizz".
+    void fizz(function<void()> printFizz) {
+        m.lock();
+        while(1){
+
+            if(count>n){
+                m.unlock();
+                break;
+            }
+
+            if(count%3==0 && count%5!=0){
+                printFizz();
+                count++;
+                m.unlock();
+            }
+            else{
+                m.unlock();
+            }
+        }
+        m.unlock();
+    }
+
+    // printBuzz() outputs "buzz".
+    void buzz(function<void()> printBuzz) {
+         m.lock();
+        while(1){
+
+            if(count>n){
+                m.unlock();
+                break;
+            }
+
+            if(count%3!=0 && count%5==0){
+                printBuzz();
+                count++;
+                m.unlock();
+            }
+            else{
+                m.unlock();
+            }
+        }
+        m.unlock();
+    }
+
+    // printFizzBuzz() outputs "fizzbuzz".
+	void fizzbuzz(function<void()> printFizzBuzz) {
+         m.lock();
+        while(1){
+
+            if(count>n){
+                m.unlock();
+                break;
+            }
+
+            if(count%3==0 && count%5==0){
+                printFizzBuzz();
+                count++;
+                m.unlock();
+            }
+            else{
+                m.unlock();
+            }
+        }
+        m.unlock();
+    }
+
+    // printNumber(x) outputs "x", where x is an integer.
+    void number(function<void(int)> printNumber) {
+         m.lock();
+        while(1){
+
+            if(count>n){
+                m.unlock();
+                break;
+            }
+
+            if(count%3!=0 && count%5!=0){
+                printNumber(count);
+                count++;
+                m.unlock();
+            }
+            else{
+                m.unlock();
+            }
+        }
+        m.unlock();
+    }
+};
