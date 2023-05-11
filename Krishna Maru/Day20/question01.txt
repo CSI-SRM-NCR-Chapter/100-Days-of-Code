@@ -1,0 +1,27 @@
+int countHillValley(vector<int>& nums) {
+        int left,right, curr;
+        left=right=curr=1;
+        int n=nums.size();
+         int count=0;
+        while(curr<n-1){
+            // left closet
+            while(left>=0 and nums[left]==nums[curr])left--;
+            // right closest
+            while(right <=n-1 and nums[right]==nums[curr])right++;
+
+            if(left>=0 and right<=n-1){
+               
+               if(nums[left]<nums[curr]  and nums[right]<nums[curr])count++;
+
+
+               else if(nums[left]>nums[curr] and nums[right]> nums[curr])count++; 
+            }
+            
+            curr=right;
+            left=curr-1;
+            right=curr+1;
+
+        }
+
+      return count;
+    }

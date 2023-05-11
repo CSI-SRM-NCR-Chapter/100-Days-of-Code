@@ -1,0 +1,19 @@
+class Solution {
+public:
+    string minWindow(string s, string t) {
+        int f[256] = {};
+        int j = 0, k = 0, len = INT_MAX, start = 0;
+        for (auto c : t) f[c]++;
+        for (int i = 0; i < s.size(); i++) {
+            if (f[s[i]]-- > 0) k++;
+            while (k == t.size()) {
+                if (i - j < len) {
+                    start = j;
+                    len = i - j;
+                }
+                if (f[s[j++]]++ == 0) k--;
+            }
+        }
+        return len == INT_MAX ? "" : s.substr(start, len +  1);
+    }
+};
