@@ -1,0 +1,17 @@
+// kth smallest element in the  BST
+class Solution {
+public:
+vector<int>v;
+void pp(TreeNode* toot){
+    if(toot==NULL){
+        return;
+    }
+    pp(toot->left);
+    v.push_back(toot->val);
+    pp(toot->right);
+}
+    int kthSmallest(TreeNode* root, int k) {
+       pp(root);
+        return v[k-1];
+    }
+};

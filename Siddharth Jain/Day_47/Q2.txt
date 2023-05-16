@@ -1,0 +1,14 @@
+// Teemo attacking
+class Solution {
+public:
+    int findPoisonedDuration(vector<int>& timeSeries, int duration);
+};
+
+int Solution::findPoisonedDuration(vector<int>& timeSeries, int duration) {
+    int count=0, i, size = timeSeries.size();
+    for (i = 0; i < size-1; ++i) {
+        count+= (timeSeries[i+1] - timeSeries[i] >= duration) ? duration : timeSeries[i+1]-timeSeries[i];
+    }
+    count+=duration;
+    return count;
+}
