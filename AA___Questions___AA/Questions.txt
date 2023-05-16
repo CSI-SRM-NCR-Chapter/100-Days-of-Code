@@ -1,82 +1,273 @@
-Day 1:
-
-https://leetcode.com/problems/fibonacci-number/
-
-https://leetcode.com/problems/fizz-buzz/
+Day 1
+1. https://leetcode.com/problems/fibonacci-number/
+2. https://leetcode.com/problems/fizz-buzz/
 
 
-Day 2:
-
-https://leetcode.com/problems/single-number
-
-https://leetcode.com/problems/merge-sorted-array
+Day 2
+1. https://leetcode.com/problems/single-number
+2. https://leetcode.com/problems/merge-sorted-array
 
 
-Day 3:
-
-https://leetcode.com/problems/two-sum/
-
-https://leetcode.com/problems/palindrome-number/
+Day 3
+1. https://leetcode.com/problems/two-sum/
+2. https://leetcode.com/problems/palindrome-number/
 
 
-Day 4:
-
-https://leetcode.com/problems/remove-duplicates-from-sorted-array/
-
-https://leetcode.com/problems/powx-n/
+Day 4
+1. https://leetcode.com/problems/remove-duplicates-from-sorted-array/
+2. https://leetcode.com/problems/powx-n/
 
 
-Day 5:
-
-https://leetcode.com/problems/majority-element/
-
-https://leetcode.com/problems/contains-duplicate/
+Day 5
+1. https://leetcode.com/problems/majority-element/
+2. https://leetcode.com/problems/contains-duplicate/
 
 
-Day 6:
-
-https://leetcode.com/problems/valid-anagram/
-
-https://leetcode.com/problems/add-digits/
+Day 6
+1. https://leetcode.com/problems/valid-anagram/
+2. https://leetcode.com/problems/add-digits/
 
 
-Day 7:
-
-https://leetcode.com/problems/ugly-number/
-
-https://leetcode.com/problems/ugly-number/
+Day 7
+1. https://leetcode.com/problems/ugly-number/
+2. https://leetcode.com/problems/ugly-number/
 
 
-Day 8:
-
-https://leetcode.com/problems/reverse-words-in-a-string/
-
-https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/
+Day 8
+1. https://leetcode.com/problems/reverse-words-in-a-string/
+2. https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/
 
 
-Day 9:
-
-https://leetcode.com/problems/reverse-integer/
-
-https://leetcode.com/problems/longest-common-prefix/
+Day 9
+1. https://leetcode.com/problems/reverse-integer/
+2. https://leetcode.com/problems/longest-common-prefix/
 
 
-Day 10:
-
-https://leetcode.com/problems/power-of-two/
-
-https://leetcode.com/problems/missing-number/
+Day 10
+1. https://leetcode.com/problems/power-of-two/
+2. https://leetcode.com/problems/missing-number/
 
 
-Day 11:
-
-https://leetcode.com/problems/hamming-distance/
-
-https://leetcode.com/problems/max-consecutive-ones/
+Day 11
+1. https://leetcode.com/problems/hamming-distance/
+2. https://leetcode.com/problems/max-consecutive-ones/
 
 
-Day 12:
+Day 12
+1. https://leetcode.com/problems/find-the-difference/
+2. https://leetcode.com/problems/ransom-note/
 
-https://leetcode.com/problems/find-the-difference/
 
-https://leetcode.com/problems/ransom-note/ 
+Day 13
+1. https://leetcode.com/problems/pascals-triangle/
+2. https://leetcode.com/problems/palindrome-partitioning/
+
+
+Day 14
+1. https://leetcode.com/problems/valid-perfect-square/
+2. https://leetcode.com/problems/queue-reconstruction-by-height/
+
+
+Day 15
+1. https://leetcode.com/problems/construct-smallest-number-from-di-string/
+2. https://leetcode.com/problems/strictly-palindromic-number/
+
+
+Day 16
+1. https://leetcode.com/problems/form-smallest-number-from-two-digit-arrays/
+2. https://leetcode.com/problems/fair-distribution-of-cookies/
+
+
+Day 17
+1. https://leetcode.com/problems/first-unique-character-in-a-string/
+2. https://leetcode.com/problems/find-all-duplicates-in-an-array/
+
+
+Day 18
+1. https://leetcode.com/problems/trapping-rain-water/
+2. https://leetcode.com/problems/delete-duplicate-emails/ 
+
+
+Day 19
+1. https://leetcode.com/problems/plus-one/
+2. https://leetcode.com/problems/sqrtx/
+
+
+Day 20
+1. https://leetcode.com/problems/count-hills-and-valleys-in-an-array/
+2. https://leetcode.com/problems/find-the-difference-of-two-arrays/
+
+
+Day 21
+1. https://leetcode.com/problems/next-greater-element-i/
+2. https://leetcode.com/problems/keyboard-row/
+
+
+Day 22
+1. https://leetcode.com/problems/length-of-last-word/
+2. https://leetcode.com/problems/longest-substring-without-repeating-characters/
+
+
+Day 23
+1. https://leetcode.com/problems/median-of-two-sorted-arrays/
+2. https://leetcode.com/problems/roman-to-integer/
+
+
+Day 24
+1. https://leetcode.com/problems/gas-station/
+2. https://leetcode.com/problems/kth-largest-element-in-an-array/
+
+
+Day 25
+1. https://leetcode.com/problems/add-binary/description/
+2. https://leetcode.com/problems/rotate-array/
+
+
+Day 26
+1. https://leetcode.com/problems/word-pattern/
+2. https://leetcode.com/problems/longest-increasing-subsequence/
+
+
+Day 27
+1. https://leetcode.com/problems/binary-number-with-alternating-bits/
+2. https://leetcode.com/problems/to-lower-case/
+
+
+Day 28
+1. https://leetcode.com/problems/employee-bonus/
+2. https://leetcode.com/problems/kth-largest-element-in-a-stream/
+
+
+Day 29
+1. https://leetcode.com/problems/jewels-and-stones/
+2. https://leetcode.com/problems/k-th-symbol-in-grammar/
+
+
+Day 30
+1. https://leetcode.com/problems/minimum-cost-of-buying-candies-with-discount/
+2. https://leetcode.com/problems/rearrange-array-elements-by-sign/
+
+
+Day 31
+1. https://leetcode.com/problems/rotate-string/
+2. https://leetcode.com/problems/escape-the-ghosts/
+
+
+Day 32
+1. https://leetcode.com/problems/is-subsequence/
+2. https://leetcode.com/problems/counting-bits/
+
+
+Day 33
+1. https://leetcode.com/problems/big-countries/
+2. https://leetcode.com/problems/reshape-the-matrix/
+
+
+Day 34
+1. https://leetcode.com/problems/isomorphic-strings/
+2. https://leetcode.com/problems/kth-smallest-element-in-a-bst/
+
+
+Day 35
+1. https://leetcode.com/problems/candy/
+2. https://leetcode.com/problems/check-distances-between-same-letters/
+
+
+Day 36
+1. https://leetcode.com/problems/fizz-buzz-multithreaded/
+2. https://leetcode.com/problems/minimum-window-substring/
+
+
+Day 37
+1. https://leetcode.com/problems/concatenation-of-array/
+2. https://leetcode.com/problems/minimum-time-to-type-word-using-special-typewriter/
+
+
+Day 38
+1. https://leetcode.com/problems/unique-morse-code-words/
+2. https://leetcode.com/problems/projection-area-of-3d-shapes/
+
+
+Day 39
+1. https://leetcode.com/problems/list-the-products-ordered-in-a-period/
+2. https://leetcode.com/problems/subsets
+
+
+Day 40
+1. https://leetcode.com/problems/count-and-say/
+2. https://leetcode.com/problems/sum-of-two-integers/
+
+
+Day 41
+1. https://leetcode.com/problems/sign-of-the-product-of-an-array/
+2. https://leetcode.com/problems/valid-parentheses/
+
+
+Day 42
+1. https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/
+2. https://leetcode.com/problems/search-insert-position/
+
+
+Day 43
+1. https://leetcode.com/problems/baseball-game/
+2. https://leetcode.com/problems/degree-of-an-array/
+
+
+Day 44
+1. https://leetcode.com/problems/ugly-number-ii/
+2. https://leetcode.com/problems/number-complement/
+
+
+Day 45
+1. https://leetcode.com/problems/create-hello-world-function/
+2. https://leetcode.com/problems/left-and-right-sum-differences/
+
+
+Day 46
+1. https://leetcode.com/problems/squares-of-a-sorted-array/
+2. https://leetcode.com/problems/delete-columns-to-make-sorted/
+
+
+Day 47
+1. https://leetcode.com/problems/teemo-attacking/
+2. https://leetcode.com/problems/binary-watch/
+
+
+Day 48
+1. https://leetcode.com/problems/guess-number-higher-or-lower/
+2. https://leetcode.com/problems/sort-characters-by-frequency/
+
+
+Day 49
+1. https://leetcode.com/problems/spiral-matrix/
+2. https://leetcode.com/problems/spiral-matrix-ii/
+
+
+Day 50
+1. https://leetcode.com/problems/longest-valid-parentheses/
+2. https://leetcode.com/problems/24-game/
+
+
+Day 51
+1. https://leetcode.com/problems/game-of-life/
+2. https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/
+
+
+Day 52
+1. https://leetcode.com/problems/search-in-a-binary-search-tree/
+2. https://leetcode.com/problems/reverse-words-in-a-string-iii/
+
+
+Day 53
+1. https://leetcode.com/problems/counting-words-with-a-given-prefix/
+2. https://leetcode.com/problems/watering-plants/
+
+
+Day 54
+1. https://leetcode.com/problems/find-target-indices-after-sorting-array/
+2. https://leetcode.com/problems/count-number-of-pairs-with-absolute-difference-k/
+
+
+Day 55
+1. https://leetcode.com/problems/subsets/
+2. https://leetcode.com/problems/n-queens/
