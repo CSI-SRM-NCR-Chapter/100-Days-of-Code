@@ -1,0 +1,32 @@
+// rearrange elements
+class Solution {
+public:
+    vector<int> rearrangeArray(vector<int>& nums) {
+        vector<int>ne;
+        vector<int>po;
+        vector<int>ans;
+        for(int i=0; i<nums.size(); i++){
+            if(nums[i]>0){
+                po.push_back(nums[i]);
+
+            }
+            else{
+                ne.push_back(nums[i]);
+            }
+        }
+        int k=0;
+        int l=0;
+        for(int i=0; i<nums.size(); i++){
+            if(i%2==0){
+                ans.push_back(po[k]);
+                k++;
+            }
+            else{
+                ans.push_back(ne[l]);
+                l++;
+            }
+        }
+        return ans;
+            
+    }
+};
