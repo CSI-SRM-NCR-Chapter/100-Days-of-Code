@@ -1,0 +1,61 @@
+class Solution {
+public:
+    int longestValidParentheses(string A) {
+    int i=0,j=A.length()-1;
+    //find first time ( 
+    for(;i<=j;i++){
+        if(A[i]=='('){
+            break;
+        }
+    }
+    // find first time ) from end of string
+    for(;j>=i;j--){
+        if(A[j]==')'){
+            break;
+        }
+    }
+    
+    // claculating in between the ( ) 
+    int open=0,close=0,st=i,len=0;
+    for(int idx=i;idx<=j;idx++){
+        if(A[idx]=='('){
+            open++;
+            
+        }
+        else{
+            close++;
+        }
+        if(open && open==close){
+            len=max(len,idx-st+1);
+        }
+        
+        else if(close>open){
+            open=0;
+            close=0;
+            st=idx+1;
+        }
+    }
+    open=0;
+    close=0;
+    st=j;
+    for(int idx=j;idx>=i;idx--){
+        if(A[idx]=='('){
+            open++;
+            
+        }
+        else{
+            close++;
+        }
+        if(open && open==close){
+            len=max(len,st-idx+1);
+        }
+        
+        else if(close<open){
+            open=0;
+            close=0;
+            st=idx-1;
+        }
+    }
+    return len;
+    }
+};
