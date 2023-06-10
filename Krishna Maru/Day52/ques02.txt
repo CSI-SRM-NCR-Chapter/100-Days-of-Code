@@ -1,0 +1,21 @@
+class Solution {
+public:
+    string reverseWords(string s) {
+        string ans="",res="";
+        for(auto i:s){
+            if(i==' '){
+                reverse(ans.begin(),ans.end());
+                res+=ans+i;
+                ans="";
+            }
+            else{
+                ans+=i;
+            }
+        }
+         reverse(ans.begin(),ans.end());
+         res+=ans;
+         ans="";
+
+        return res;
+    }
+};

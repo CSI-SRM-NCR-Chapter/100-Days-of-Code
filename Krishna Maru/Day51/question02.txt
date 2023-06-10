@@ -1,0 +1,38 @@
+class Solution {
+public:
+    int kthSmallest(vector<vector<int>>& mat, int k) {
+        int r=mat.size();
+        int c=mat[0].size();
+        int stval=mat[0][0],enval=mat[r-1][c-1];
+        while(stval<=enval){
+          int midval=stval+(enval-stval)/2;
+          int ans=0;
+            for(int i=0;i<r;i++){
+                
+                int low=0,end=c-1;
+                
+                
+                
+                while(low<=end){
+                    
+                    int mid=low+(end-low)/2;
+                    
+                  if(mat[i][mid]<=midval){
+                      low=mid+1;
+                  }
+                  else{
+                  end=mid-1;
+                }
+                
+             }
+             
+            ans+=low;
+             
+            }
+            
+            if(ans<k)stval=midval+1;
+            else enval=midval-1;
+        }
+        return stval;
+    }
+};
