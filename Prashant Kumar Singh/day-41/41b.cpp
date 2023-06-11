@@ -1,14 +1,14 @@
-class Solution {
+class Solution{
 public:
-    bool isValid(string s) {
-        stack<char> st; 
+    bool isValid(string s){
+        stack<char> ans; 
         for(auto i:s){
-            if(i=='(' or i=='{' or i=='[') st.push(i);  
+            if(i=='(' or i=='{' or i=='[') ans.push(i);  
             else{
-                if(st.empty() || (st.top()=='(' && i!=')') || (st.top()=='{' && i!='}') || (st.top()=='[' && i!=']')) return false;
-                st.pop(); 
+                if(ans.empty() || (ans.top()=='(' && i!=')') || (ans.top()=='{' && i!='}') || (ans.top()=='[' && i!=']')) return false;
+                ans.pop(); 
             }
         }
-        return st.empty();  
+        return ans.empty();
     }
 };
