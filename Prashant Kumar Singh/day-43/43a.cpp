@@ -1,17 +1,24 @@
 class Solution {
 public:
     int calPoints(vector<string>& operations) {
-        int n = operations.size();
-        vector<int> scores(n);
-
-        int j = 0;
-        for (auto ch: operations) {
-            if (ch == "+") scores[j++] = scores[j-1]+scores[j-2];
-            else if (ch == "D") scores[j++] = scores[j-1]*2;
-            else if (ch == "C") scores[--j] = 0;
-            else scores[j++] = stoi(ch);
+        int ans = 0;
+        stack<int> s;
+        for(auto i:operations){
+            if(i == "C") s.pop();
+            else if(i == "D") s.push(s.top()*2);
+            else if(i == "+"){
+                int val1 = s.top();
+                s.pop();
+                int val2 = s.top();
+                s.push(val1);
+                s.push(val1 + val2);
+            }
+            else s.push(stoi(i));
         }
-
-        return accumulate(begin(scores), end(scores), 0);
+        while(s.size() != 0){
+            ans += s.top();
+            s.pop();
+        }
+        return ans;
     }
 };
