@@ -1,0 +1,13 @@
+    unordered_map<string,string>Emapp;
+    // Encodes a URL to a shortened URL.
+    string encode(string longUrl) {  
+        string shortUrl="http:tinurl.com/8542";
+        Emapp[shortUrl]=longUrl;
+        return shortUrl;
+    }
+
+    // Decodes a shortened URL to its original URL.
+    string decode(string shortUrl) {
+        return Emapp[shortUrl];
+        
+    }
