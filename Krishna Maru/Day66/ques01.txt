@@ -1,0 +1,21 @@
+class Solution {
+public:
+    string convertToBase7(int num) {
+        
+        string ans="";
+        if(num==0)return "0";
+        int n=num;
+        if(num<0){
+            n=-num;
+        }
+        while(n){
+            int rem = n%7;
+            n=n/7;
+            ans=to_string(rem)+ans;
+        }
+
+        if(num<0)return "-"+ans;
+        return ans;
+
+    }
+};
