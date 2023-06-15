@@ -1,0 +1,22 @@
+class MyCalendar {
+public:
+    vector<pair<int,int>>range;
+    MyCalendar() {
+        
+    }
+    
+    bool book(int start, int end) {
+        for(int i=0;i<range.size();i++){
+            if((start<range[i].first and end<=range[i].first) or (range[i].first<start and range[i].second<=start)) continue;
+            else return false;
+        }
+        range.push_back({start,end});
+        return true;
+    }
+};
+
+/**
+ * Your MyCalendar object will be instantiated and called as such:
+ * MyCalendar* obj = new MyCalendar();
+ * bool param_1 = obj->book(start,end);
+ */
