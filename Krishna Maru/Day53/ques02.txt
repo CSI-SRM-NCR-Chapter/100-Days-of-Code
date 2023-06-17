@@ -1,0 +1,19 @@
+class Solution {
+public:
+    int wateringPlants(vector<int>& plants, int capacity) {
+        int step=0;
+        int back_step=0;
+        int initial_capacity=capacity;
+
+        for(auto need:plants){
+            if(capacity<need){
+                back_step+=step+step;
+                capacity=initial_capacity;
+            }
+            capacity=capacity-need;
+            step++;
+
+        }
+        return back_step+step;
+    }
+};
