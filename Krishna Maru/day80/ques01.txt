@@ -1,0 +1,39 @@
+class Solution {
+public:
+    bool check(long long int mid,long long int index,long long int maxSum,long long int n){
+        long long int sum=0;
+        long long int rem=mid-(index+1);
+        long long int add=0;
+        if(rem<0){
+            rem=0;
+            add=index+1-mid;
+        }
+    sum+=mid*(mid+1)/2 - max(rem*(rem+1)/2,0ll)+add;
+
+    mid--;
+    add=0;
+    rem=mid-(n-index-1);
+     if(rem<0){
+            rem=0;
+            add=(n-index-1)-mid;
+        }
+    sum+=mid*(mid+1)/2-max(rem*(rem+1)/2,0ll)+add;
+   return sum<=maxSum;
+    }
+ 
+    int maxValue(int n, int index, int maxSum) {
+        int low=1;
+        int high=1e9+5;
+        int ans=0;
+        while(low<=high){
+            long long int mid=(low+high)/2;
+            if(check(mid,index,maxSum,n)){
+                ans=mid;
+                low=mid+1;
+            }else{
+                high=mid-1;
+            }
+        }
+        return ans;
+    }
+};

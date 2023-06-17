@@ -1,0 +1,23 @@
+class Solution {
+public:
+    int semiOrderedPermutation(vector<int>& nums) {
+        int n=nums.size();
+        if(nums[0]==1 and nums[n-1]==n){
+            return 0;
+        }
+       int st,en;
+       for(int i=0;i<n;i++){
+         
+         if(nums[i]==1){
+             st=i;
+         }
+         if(nums[i]==n){
+             en=i;
+         }
+       }
+      if(st>en)return st+n-en-2;
+      return st+n-1-en;
+     
+
+    }
+};
