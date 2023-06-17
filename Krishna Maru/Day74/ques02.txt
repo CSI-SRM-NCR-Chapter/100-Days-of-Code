@@ -1,0 +1,23 @@
+class Solution {
+public:
+    int smallestRangeI(vector<int>& nums, int k) {
+        if(nums.size()==1)return 0;
+        // sort(nums.begin(),nums.end());
+        // int min=nums[0];
+
+        // int max=nums[nums.size()-1];
+
+        // if(max-k<=min+k)return 0;
+       
+        // return max-min-k-k;
+
+        int min= *min_element(nums.begin(),nums.end());
+        int max = *max_element(nums.begin(),nums.end());
+
+        int tem= max-min;
+        
+        return tem<k+k?0:tem-k-k;
+
+
+        }
+};
