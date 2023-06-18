@@ -1,0 +1,29 @@
+// base-7
+class Solution {
+public:
+    string convertToBase7(int num) {
+        if (num == 0) {
+            return "0";
+        }
+
+        bool is_negative = false;
+        if (num < 0) {
+            is_negative = true;
+            num = abs(num);
+        }
+
+        string base7_repr = "";
+        while (num > 0) {
+            base7_repr += to_string(num % 7);
+            num /= 7;
+        }
+
+        if (is_negative) {
+            base7_repr += "-";
+        }
+
+        reverse(base7_repr.begin(), base7_repr.end());
+
+        return base7_repr;
+    }
+};
