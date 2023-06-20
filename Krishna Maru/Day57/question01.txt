@@ -1,0 +1,13 @@
+class Solution {
+public:
+    int bestRotation(vector<int>& nums) {
+       int n=nums.size();
+       vector<int>rotate(n);
+
+       for(int i=0;i<n;i++) --rotate[(i-nums[i]+1+n)%n];
+
+       for(int i=1;i<n;i++)rotate[i]+=rotate[i-1]+1;
+
+       return distance(rotate.begin(),max_element(rotate.begin(),rotate.end()));
+    }
+};

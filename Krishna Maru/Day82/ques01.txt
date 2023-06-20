@@ -1,0 +1,54 @@
+class Solution {
+    vector<vector<char>> res;
+    vector<vector<bool>> row{9, vector<bool>(10)};
+    vector<vector<bool>> col{9, vector<bool>(10)};
+    vector<vector<bool>> sub{9, vector<bool>(10)};
+    void solve(vector<vector<char>>& board, int i, int j) {
+        if (i==8 and j==9) {
+            res = board;
+            return;
+        }
+
+        if (j==9) {i++; j=0;}
+        if (i==9) return;
+
+        if (board[i][j] != '.') {
+            solve(board, i, j+1);
+            return;
+        }
+
+        for (int k=1; k<=9; k++) {
+            if (row[i][k] || col[j][k] || sub[i/3*3+j/3][k]) continue;
+
+            row[i][k] = 1;
+            col[j][k] = 1;
+            sub[i/3*3 + j/3][k] = 1;
+
+            board[i][j] = k+'0';
+            solve(board, i, j+1);
+            board[i][j] = '.';
+
+            row[i][k] = 0;
+            col[j][k] = 0;
+            sub[i/3*3 + j/3][k] = 0;
+        }
+    }
+
+public:
+    void solveSudoku(vector<vector<char>>& board) {
+        int n = board.size();
+        for (int i=0; i<n; i++) {
+            for (int j=0; j<n; j++) {
+                if (board[i][j] != '.') {
+                    row[i][board[i][j]-'0'] = 1;
+                    col[j][board[i][j]-'0'] = 1;
+                    sub[i/3*3 + j/3][board[i][j]-'0'] = 1;
+                }
+            }
+        }
+
+      solve(board, 0, 0);
+        board = res;
+    }
+    
+};

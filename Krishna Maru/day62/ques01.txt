@@ -1,0 +1,15 @@
+    int findLHS(vector<int>& nums) {
+         unordered_map<int,int>mapp;
+         int size=0;
+         for(auto i:nums){
+             mapp[i]++;
+         }
+
+         for(auto i:nums){
+             int curr=i;
+             if(mapp.find(curr+1)!=mapp.end()){
+                 size=max(size,mapp[curr]+mapp[curr+1]);
+             }
+         }
+         return size;
+    }

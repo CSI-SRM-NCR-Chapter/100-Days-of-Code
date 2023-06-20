@@ -1,0 +1,20 @@
+class Solution {
+public:
+    int partitionString(string s) {
+      int count=1;
+      string ans;
+      for(auto i:s){
+         
+         if(ans.find(i)==string::npos){
+             ans.push_back(i);
+         }
+         else{
+             count++;
+             ans.clear();
+             ans.push_back(i);
+         }
+      }
+      return count;
+        
+    }
+};

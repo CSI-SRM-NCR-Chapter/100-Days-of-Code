@@ -1,0 +1,34 @@
+class Solution {
+public:
+    bool detectCapitalUse(string word) {
+        bool up=true,low=true,st;
+        for(auto i:word){
+            if(isupper(i)){
+                up=up & true;
+            }
+            else{
+                up= up & false;
+            }
+
+            if(islower(i)){
+                low=low & true;
+            }
+            else{
+                low=low &false;
+            }
+
+
+        }
+
+        if(up)return true;
+        if(low)return true;
+        st = isupper(word[0]);
+        for(int i=1;i<word.size();i++){
+              if(st and isupper(word[i]))return false;
+              if(!st and isupper(word[i]))return false;
+
+              
+        }
+        return true;
+    }
+};
