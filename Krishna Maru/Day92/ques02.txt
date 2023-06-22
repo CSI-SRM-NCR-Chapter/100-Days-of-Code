@@ -1,0 +1,23 @@
+class Solution {
+public:
+    int minImpossibleOR(vector<int>& nums) {
+        int n=nums.size();
+        sort(nums.begin(),nums.end());
+        if(nums[0]!=1)return 1;
+        set<int>st;
+        unordered_map<int,bool>mapp;
+        int x=0;
+        for(auto i:nums){
+             x=x|i;
+             st.insert(x);
+             mapp[i]=1;
+            
+        }
+        for(auto i:st){
+            if(mapp.find(i+1)==mapp.end()){
+                return i+1;
+            }
+        }
+        return -1;
+    }
+};
