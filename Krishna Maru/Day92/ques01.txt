@@ -1,0 +1,39 @@
+class Solution {
+public:  
+    
+    #define ll long long 
+    long long minCost(vector<int>& nums, vector<int>& cost) 
+    {
+        int n = nums.size();
+        
+        vector<pair<int,int>>mapp;
+        ll sum = 0;
+        for(int i=0;i<n;i++)
+        {
+            mapp.push_back({nums[i], cost[i]});
+            sum+=cost[i];
+        }
+        
+        sort(mapp.begin(),mapp.end()); 
+        
+        int median;
+        
+        ll total = 0;
+        ll i=0;
+        while(i<n and total<=sum/2)
+        {
+            total+=mapp[i].second;
+            median = mapp[i].first;
+            i++;
+        }
+        
+        ll res = 0;
+        
+        for(int i=0;i<mapp.size();i++)
+        {
+            res+=(abs(nums[i]-median)*(ll)cost[i]);
+        }
+        
+        return res;
+    }
+};
