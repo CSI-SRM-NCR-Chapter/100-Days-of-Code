@@ -1,0 +1,20 @@
+class Solution {
+public:
+    vector<vector<int>>res;
+    void solve(int i, int n, int k,vector<int>&ans){
+        if(ans.size()==k){
+            res.push_back(ans);
+            return;
+        }
+        for(int j=i;j<=n;j++){
+            ans.push_back(j);
+            solve(j+1,n,k,ans);
+            ans.pop_back();
+        }
+    }
+    vector<vector<int>> combine(int n, int k) {
+        vector<int>ans;
+        solve(1,n,k,ans);
+        return res;
+    }
+};

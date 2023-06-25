@@ -1,0 +1,33 @@
+class Solution {
+    private:
+    int kadene(vector<int>& nums,int n){
+     int sum=nums[0];
+     int max_sum=nums[0];
+     for(int i=1;i<n;i++){
+         //sum+=nums[i];
+        if(sum<0){
+            sum=0;
+         }
+         sum+=nums[i];
+         max_sum=max(max_sum, sum);
+     }
+     return max_sum;
+    }
+public:
+    int maxSubarraySumCircular(vector<int>& nums) {
+       
+        int nonwrapsum=0;
+        int n=nums.size();
+        // sum without wrapping(means no need to traverse circular)
+        nonwrapsum=kadene(nums,n);
+        // element those not contribute to sum take out there sum and subtract from total sum;    
+        int totalsum=0;
+        for(int i=0;i<n;i++){
+            totalsum+=nums[i];
+            nums[i]=-nums[i];
+        }
+        int wrapsum=totalsum+kadene(nums,n);
+        if(wrapsum==0)return nonwrapsum;
+        return max(wrapsum,nonwrapsum);
+    }
+};

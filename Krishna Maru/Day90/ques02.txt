@@ -1,0 +1,42 @@
+class Solution {
+private:
+int gcd(int x, int y)
+{
+    return y == 0 ? x : gcd(y, x % y);
+}
+public:
+bool canMeasureWater(int x, int y, int z) {
+    return z == 0 || (z - x <= y && z % gcd(x, y) == 0);
+}
+};
+
+    // bool canMeasureWater(int jug1Capacity, int jug2Capacity, int targetCapacity) {
+    //     queue<int> q;
+    //     unordered_set<int> memo;
+    //     int amt[4] = {jug1Capacity, -jug1Capacity, jug2Capacity, -jug2Capacity};
+    //     int cap = jug1Capacity + jug2Capacity;
+    //     q.push(0);
+    //     memo.insert(0);
+
+    //     while(!q.empty()){
+    //         int sz = q.size();
+    //         for(int i = 0;i < sz; i++){
+    //             int cur = q.front(); q.pop();
+
+    //             if(cur == targetCapacity){
+    //                 return true;
+    //             }
+                
+    //             for(int k = 0; k < 4; k++){
+    //                 int ns = cur + amt[k];
+    //                 if(ns >= 0 && ns <= cap && !memo.count(ns)){
+    //                     q.push(ns);
+    //                     memo.insert(ns);
+    //                 }
+    //             }
+    //         }
+    //     }   
+    //     return false; 
+    // }
+
+// };

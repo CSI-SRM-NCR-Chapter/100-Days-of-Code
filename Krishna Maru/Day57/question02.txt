@@ -1,0 +1,13 @@
+class Solution {
+public:
+    vector<int> sortArrayByParity(vector<int>& nums) {
+      vector<int>even;
+      for(auto i : nums){
+          if(i%2==0)even.push_back(i);
+      } 
+      for(auto i:nums){
+          if(i%2)even.push_back(i);
+      }
+      return even;
+    }
+};
