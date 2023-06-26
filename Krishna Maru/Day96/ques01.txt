@@ -1,0 +1,28 @@
+class Solution {
+public:
+bool check(string s){
+    for(auto i:s){
+        int p=i<=90? i+32:i-32;
+        if(s.find(char(p))==-1)return false; 
+    }
+    return true;
+}
+    string longestNiceSubstring(string s) {
+        int n=s.size();
+        if(n==1)return "";
+        if(n==2){
+            if((tolower(s[0])==s[1])or(toupper(s[0])==s[1]))return s;
+            else return "";
+        }
+        string res="";
+        for(int i=0;i<n;i++){
+            string ans="";
+            ans+=s[i];
+            for(int j=i+1;j<n;j++){
+                ans+=s[j];
+                if(check(ans) && ans.size()>res.size())res=ans;
+            }
+        }
+        return res;
+    }
+};
