@@ -476,3 +476,8 @@ Day 95
 Day 96
 1. https://leetcode.com/problems/beautiful-array/
 2. https://leetcode.com/problems/longest-nice-substring/
+
+
+Day 97
+1. https://leetcode.com/problems/find-the-prefix-common-array-of-two-arrays/
+2. https://leetcode.com/problems/find-the-punishment-number-of-an-integer/
