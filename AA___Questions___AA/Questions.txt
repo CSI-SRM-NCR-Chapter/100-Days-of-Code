@@ -481,3 +481,8 @@ Day 96
 Day 97
 1. https://leetcode.com/problems/find-the-prefix-common-array-of-two-arrays/
 2. https://leetcode.com/problems/find-the-punishment-number-of-an-integer/
+
+
+Day 98
+1. https://leetcode.com/problems/sort-list/
+2. https://leetcode.com/problems/sort-colors/
