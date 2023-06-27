@@ -1,0 +1,22 @@
+class Solution {
+public:
+    vector<int> findThePrefixCommonArray(vector<int>& A, vector<int>& B) {
+      unordered_map<int,int>mapp;
+      
+      vector<int>ans;
+     
+      for(int i=0;i<A.size();i++){
+          int count=0;
+           mapp[A[i]]++;
+           mapp[B[i]]++;
+           for(auto a:mapp){
+               if(a.second==2){
+                   count++;
+               }
+           }
+           ans.push_back(count);
+      }
+      return ans;
+
+    }
+};
