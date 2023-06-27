@@ -1,0 +1,25 @@
+class Solution {
+public:
+    vector<int> beautifulArray(int n) {
+           
+           if(n==1)return {1};
+           vector<int>v={1};
+           while(v.size()<n){
+               vector<int>ans;
+               for(auto i :v){
+                   if(2*i<=n){
+                       ans.push_back(2*i);
+                   }
+               }
+
+               for(auto i:v){
+                   if(2*i-1<=n){
+                       ans.push_back(2*i-1);
+                   }
+               }
+               v=ans;
+           }
+           return v;
+
+    }
+};

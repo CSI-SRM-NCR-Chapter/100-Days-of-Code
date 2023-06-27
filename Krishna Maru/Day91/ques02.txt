@@ -1,0 +1,19 @@
+class Solution {
+public:
+    int subarraySum(vector<int>& nums, int k) {
+        
+        unordered_map<int,int> mapp;
+        
+        int sum = 0, result = 0;
+        mapp[sum] = 1;
+        
+        for (int n : nums) {
+            sum += n;
+            result += mapp[sum - k];
+            mapp[sum]++;
+        }
+        
+        return result;
+
+    }
+};
