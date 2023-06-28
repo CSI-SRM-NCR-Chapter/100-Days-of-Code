@@ -486,3 +486,8 @@ Day 97
 Day 98
 1. https://leetcode.com/problems/sort-list/
 2. https://leetcode.com/problems/sort-colors/
+
+
+Day 99
+1. https://leetcode.com/problems/maximum-gap/
+2. https://leetcode.com/problems/relative-ranks/
