@@ -1,0 +1,16 @@
+//Best Time to Buy and Sell Stock
+
+class Solution {
+    public int maxProfit(int[] a) {
+        int max_profit=0;
+        int min=a[0];
+        for(int i=0;i<a.length;i++){
+            min=Math.min(min,a[i]);
+            int profit=a[i]-min;
+            max_profit=Math.max(profit,max_profit);
+
+        }
+
+        return max_profit;
+    }
+}
