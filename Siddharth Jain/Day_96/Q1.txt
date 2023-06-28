@@ -1,0 +1,19 @@
+// beautiful Array
+class Solution {
+public:
+  static bool comp(const int &a, const int &b){
+    int mask = 1;
+    while(true)
+      if((a&mask) == (b&mask)) mask = mask<<1;
+      else return (a&mask) > (b&mask); 
+  }
+  
+  vector<int> beautifulArray(int n) {
+    vector<int> answer;
+    while(n) answer.push_back(n--);
+    
+    sort(answer.begin(), answer.end(), comp);
+    
+    return answer;
+  }
+};
