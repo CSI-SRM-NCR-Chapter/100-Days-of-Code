@@ -491,3 +491,8 @@ Day 98
 Day 99
 1. https://leetcode.com/problems/maximum-gap/
 2. https://leetcode.com/problems/relative-ranks/
+
+
+Day 100
+1. https://leetcode.com/problems/put-marbles-in-bags/
+2. https://leetcode.com/problems/power-of-heroes/
