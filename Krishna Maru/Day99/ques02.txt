@@ -1,0 +1,19 @@
+class Solution {
+public:
+    int maximumGap(vector<int>& nums) {
+        int n=nums.size();
+        if(n<2)return 0;
+        set<int>mapp;
+        for(int i=0;i<n;i++){
+            mapp.insert(nums[i]);
+        }
+        if(mapp.size()<2)return 0;
+        int diff=0;
+        vector<int>order;
+        for(auto i:mapp){
+            order.push_back(i);
+        }
+        for(int i=0;i<order.size()-1;i++)diff=max(diff,order[i+1]-order[i]);
+        return diff;
+    }
+};

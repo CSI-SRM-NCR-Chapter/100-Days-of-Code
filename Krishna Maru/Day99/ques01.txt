@@ -1,0 +1,28 @@
+class Solution {
+public:
+    vector<string> findRelativeRanks(vector<int>& score) {
+        priority_queue<pair<int,int>>pq;
+        for(int i=0;i<score.size();i++)pq.push({score[i],i});
+        vector<string>ans(score.size());
+        int rank=1;
+        while(!pq.empty()){
+            int x=pq.top().second;
+            if(rank>=4)
+              ans[x]=to_string(rank);
+            else{
+                if(rank==1){
+                    ans[x]="Gold Medal";
+                }
+                else if (rank==2){
+                    ans[x]="Silver Medal";
+                }
+                else{
+                    ans[x]="Bronze Medal";
+                }
+            }
+            rank=rank+1;
+            pq.pop();
+        }
+        return ans;
+    }
+};
