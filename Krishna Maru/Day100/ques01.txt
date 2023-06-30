@@ -1,0 +1,16 @@
+class Solution {
+public:
+int mod=1e9+7;
+    int sumOfPower(vector<int>& nums) {
+        
+        sort(nums.begin(),nums.end());
+        long long res=0,pre=0;
+        int n=nums.size();
+        for(int i=0;i<n;i++){
+            res= (res+(((pre+nums[i])%mod*nums[i])%mod*nums[i])%mod)%mod;
+            pre= ((pre<<1)%mod+nums[i])%mod;
+        }
+
+     return res;   
+    }
+};
