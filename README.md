@@ -1,5 +1,9 @@
 # 100-Days-of-Code
 
+-> The event has concluded <-
+
+
+
 100 Days of Code is a coding event being organized by the CSI SRM NCR Chapter  and it is aimed at improving the problem solving skills of those who participate through consistent practice of questions every day for a hundred days.
 
 Start:  Saturday, March 22, 2023<br>
